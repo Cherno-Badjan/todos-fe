@@ -34,7 +34,7 @@ export default class SignUp extends Component {
                         Password:
                         <input value={this.state.password} onChange={this.handlePasswordChange} />
                     </label>
-                    <button>Submit</button>
+                    <button>Sign Up</button>
 
                 </form>
 
