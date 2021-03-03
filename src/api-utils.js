@@ -19,7 +19,7 @@ export async function getTodos(token) {
     return response.body;
 }
 export async function addTodo(todo, token) {
-    const response = await request.post(`${URL}/api/todos`).set('Authorization', token)
+    const response = await request.post(`${URL}/api/todos`).set('Authorization', token).send({ todo })
     return response.body;
 }
 
