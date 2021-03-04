@@ -22,12 +22,17 @@ export default class App extends Component {
 
     putUserInLs(user);
   }
+
+  handleLogOut = () => {
+    this.handleUserChange();
+  }
   render() {
     const { user } = this.state;
     return (
       <div className="App" >
         <Router>
-          <Header user={this.state.user} />
+          <Header user={this.state.user}
+            handleLogOut={this.handleLogOut} />
           <Switch>
             <Route path="/" exact render={(routerProps) => <Home {...routerProps} />} />
             <PrivateRouter path="/todos" exact token={user && user.token} render={(routerProps) => <TodosListPage user={this.state.user}{...routerProps} />} />
