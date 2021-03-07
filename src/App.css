@@ -36,3 +36,29 @@
     transform: rotate(360deg);
   }
 }
+
+a {
+  margin:10px;
+}
+
+.todo {
+  border: solid 1px black;
+  border-radius: 50%;
+  width: 50%;
+  padding: 10px;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+.todo:hover {
+  background-color:greenyellow;
+}
+
+.true{
+  text-decoration: line-through;
+}
+
+.todoList {
+  display:flex;
+  justify-content: center;
+}

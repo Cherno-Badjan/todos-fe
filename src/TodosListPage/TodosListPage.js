@@ -37,15 +37,19 @@ export default class TodosListPage extends Component {
         this.fetchTodos();
     }
     render() {
+        console.log(this.state.todos)
         return (
-            <div>
+            <div className="todoList">
                 <form onSubmit={this.handleSubmit}>
                     <input value={this.state.todo} onChange={this.handleTodoChange} />
                     <button>Add Task</button>
                 </form>
-                {!this.state.todos.length && <p>All tasks completed!</p>}
-                {this.state.todos.map(todo => <p key={`${todo.todo}`} onClick={() => this.handleComplete(todo.id)}
-                    className={`todo ${todo.completed} ? 'completed' : ''}`}> {todo.todo}</p>)}
+                <div>
+                    {!this.state.todos.length && <p>All tasks completed!</p>}
+                    {this.state.todos.map(todo => <p key={`${todo.todo}`} onClick={() => this.handleComplete(todo.id)}
+                        className={`todo ${todo.completed} 
+                        ? 'true' : ''}`}> {todo.todo}</p>)}
+                </div>
             </div>
         )
     }
