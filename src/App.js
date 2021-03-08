@@ -24,8 +24,7 @@ export default class App extends Component {
   }
 
   handleLogOut = () => {
-    this.handleUserChange();
-    localStorage.removeItem(this.state.user);
+    this.handleUserChange()
   }
   render() {
     const { user } = this.state;

@@ -14,3 +14,4 @@ export function getUserFromLs() {
         token: ''
     }
 }
+
